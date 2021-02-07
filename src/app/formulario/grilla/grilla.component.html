@@ -1,0 +1,24 @@
+<h4>Usuarios Subidos</h4>
+
+<div class="container">
+    <div class="row">
+      <div *ngFor = "let usuario of usuarios" class="card col-3">
+        <div class="card-body">
+          {{usuario.nombre}} 
+          <br> 
+          {{usuario.apellido}} 
+          <br> 
+          {{usuario.numeroTelefono}}
+          <br>
+          {{usuario.email}}
+          <br>
+          {{usuario.fechaNacimiento}}
+          <br>
+          {{usuario.genero}}
+
+          <button>X</button>
+        </div>
+          
+      </div>
+    </div>
+  </div>

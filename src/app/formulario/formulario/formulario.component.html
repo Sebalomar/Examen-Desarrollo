@@ -1,0 +1,125 @@
+<h4>Registro</h4>
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="agregar()" autocomplete="off" [formGroup] = "formulario">
+            <div class="mb-3 row">
+                <label class = "col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sn-9">
+                    <input type="text" 
+                    class="form-control" 
+                    formControlName ="nombre"
+                    placeholder="Ingrese su nombre">
+                </div>
+                <span class="form-text text-danger"
+                *ngIf="validarCampo('nombre')">
+                    Minimo 3 caracteres             
+                </span>
+            </div>
+
+
+            <div class="mb-3 row">
+                <label class = "col-sm-3 col-form-label">Apellido</label>
+                <div class="col-sn-9">
+                    <input type="text" 
+                    class="form-control" 
+                    formControlName ="apellido"
+                    placeholder="Ingrese su Apellido">
+                </div>
+                <span class="form-text text-danger"
+                *ngIf="validarCampo('apellido')">
+                    Minimo 3 caracteres             
+                </span>
+            </div>
+
+            <div class="mb-3 row">
+                <label class = "col-sm-3 col-form-label">Numero de Telefono</label>
+                <div class="col-sn-9">
+                    <input type="number" 
+                    class="form-control" 
+                    formControlName ="telefono"
+                    placeholder="Ingrese su numero de telefono">
+                </div>
+                <span class="form-text text-danger"
+                *ngIf="validarCampo('apellido')">
+                    Ingrese un numero de telefono             
+                </span>
+            </div>
+
+            <div class="mb-3 row">
+                <label class = "col-sm-3 col-form-label">Email</label>
+                <div class="col-sn-9">
+                    <input type="email" 
+                    class="form-control" 
+                    formControlName ="email"
+                    placeholder="Ingrese su email">
+                </div>
+                <span class="form-text text-danger"
+                *ngIf="validarCampo('email')">
+                    Ingrese un email valido             
+                </span>
+            </div>
+
+
+            <div class="mb-3 row">
+                <label class = "col-sm-3 col-form-label">Fecha de Nacimiento</label>
+                <div class="col-sn-9">
+                    <input type="date" 
+                    class="form-control"
+                    formControlName ="fechaNacimiento"
+                    >
+                </div>
+                <span class="form-text text-danger"
+                *ngIf="validarCampo('fechaNacimiento')">
+                    Ingrese su fecha de nacimiento             
+                </span>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Género</label>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="radio"
+                               value="Masculino"
+                               formControlName="genero"
+                               name="genero"
+                               id="radioMasculino">
+                        <label class="form-check-label" for="radioMasculino">
+                          Masculino
+                        </label>
+                    </div>
+        
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="radio"
+                               value="Femenino"
+                               name="genero"
+                               formControlName ="genero"
+                               id="radioFemenino">
+                        <label class="form-check-label" for="radioFemenino">
+                          Femenino
+                        </label>
+                    </div>
+                    <span class="form-text text-danger"
+                    *ngIf="validarCampo('genero')">
+                        Eliga su genero             
+                    </span>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary float-end"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </div>
+        
+        </form>
+    </div>
+</div>
+
+<!-- [disabled]="formulario.invalid" -->
