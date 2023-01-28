@@ -9,13 +9,17 @@ import { FormularioService } from '../services/formulario.service';
   ]
 })
 export class GrillaComponent{
-
   
   get usuarios(){
     return this.formularioService.usuarios;
   }
 
+  eliminar(id: number){
+    this.formularioService.eliminarUsuario(id);
+  }
+
   constructor( private formularioService: FormularioService) { }
+
 
 
 }

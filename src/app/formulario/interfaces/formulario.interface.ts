@@ -1,9 +1,10 @@
 
 export interface Usuario {
+    id?: number,
     nombre: string;
     apellido: string;
-    numeroTelefono: number;
+    telefono: string;
     email: string;
-    fechaNacimiento: Date; /* Corregir */
+    fechaNacimiento: Date;
     genero: string;
   }

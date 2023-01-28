@@ -1,22 +1,24 @@
-<h4>Usuarios Subidos</h4>
+<h4>Usuarios</h4>
 
 <div class="container">
-    <div class="row">
+    <div class="row flex">
       <div *ngFor = "let usuario of usuarios" class="card col-3">
         <div class="card-body">
           {{usuario.nombre}} 
           <br> 
           {{usuario.apellido}} 
           <br> 
-          {{usuario.numeroTelefono}}
+          {{usuario.telefono}}
           <br>
           {{usuario.email}}
           <br>
           {{usuario.fechaNacimiento}}
           <br>
           {{usuario.genero}}
-
-          <button>X</button>
+          <div class="btn-eliminar">
+            <button (click) = "eliminar(usuario.id)" type="button" class="btn btn-dark float-end" >X</button>
+          </div>
+          
         </div>
           
       </div>

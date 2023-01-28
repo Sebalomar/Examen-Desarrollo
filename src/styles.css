@@ -5,10 +5,19 @@
   }
   
   html, body {
-    
-    background: white;
     margin: 20px;
     color: #3e4144;
-    -webkit-font-smoothing: antialiased;
   }
   
+.card-body .btn-eliminar {
+  display: none;
+}
+
+.card-body:hover .btn-eliminar{
+  display: inline;
+}
+
+.card{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
